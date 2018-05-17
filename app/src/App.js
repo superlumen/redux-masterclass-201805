@@ -1,6 +1,17 @@
 import React, { Component } from "react";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 import logo from "./logo.svg";
 import "./App.css";
+
+const empty = {
+  counter: 0,
+  menu: {
+    isOpen: false
+  }
+};
+
+const reducer = (state = empty, action) => state;
 
 class App extends Component {
   render() {
