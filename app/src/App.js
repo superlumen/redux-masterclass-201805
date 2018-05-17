@@ -4,14 +4,8 @@ import { Provider } from "react-redux";
 import logo from "./logo.svg";
 import "./App.css";
 
-const empty = {
-  counter: 0,
-  menu: {
-    isOpen: false
-  }
-};
+import reducer from "./reducer";
 
-const reducer = (state = empty, action) => state;
 const store = createStore(reducer);
 
 class App extends Component {
