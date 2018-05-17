@@ -1,3 +1,5 @@
+import * as ActionTypes from "./actions";
+
 const empty = {
   counter: 0,
   menu: {
@@ -10,7 +12,7 @@ const reducer = (state = empty, action) => {
   // const type = action.type
   // const payload = action.payload
 
-  if (type === "INC") {
+  if (type === ActionTypes.INC) {
     return { ...state, counter: state.counter + 1 };
   }
 
