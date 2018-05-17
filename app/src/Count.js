@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { inc } from "./actions";
+
 const Count = props => {
   const { theCounterIsAt } = props;
   return (
@@ -17,4 +19,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Count);
+const mapDispatchToProps = dispatch => {
+  return {
+    putTheNumberUp: () => dispatch(inc())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Count);
